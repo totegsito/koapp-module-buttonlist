@@ -1,0 +1,70 @@
+{
+  "name" : "Button List",
+  "identifier" : "buttonlist",
+  "description": {
+    "es-ES": "Muestra una lista de botones.",
+    "en-US": "Show a button list."
+  },
+  "documentation": {
+    "es-ES": "",
+    "en-US": ""
+  },
+  "descriptionShort": {
+    "es-ES": "Muestra una lista de botones",
+    "en-US": "Show a button list"
+  },
+  "icon" : "code",
+  "type" : "A",
+  "version" : "1.0",
+  "author" : "King of App",
+  "category" : [
+      "others"
+  ],
+  "price" : 0,
+  "canContain": true,
+  "subscription": false,
+  "platforms" : [
+      "android",
+      "ios",
+      "windows"
+  ],
+  "view" : "modules/buttonlist/index.html",
+  "files" : [
+      "modules/buttonlist/controller.js",
+      "modules/buttonlist/styles.html"
+  ],
+  "scope" : {
+      "menuItems": [
+      ]
+  },
+  "config" : [
+    {
+      "type": "repeatSection",
+      "key": "menuItems",
+      "templateOptions": {
+        "label": "Items",
+        "btnText": "Add another button to the list",
+        "fields": [{
+          "type": "select",
+          "key": "path",
+          "templateOptions": {
+            "label": "Path1",
+            "required": true
+          }
+        }, {
+          "type": "input",
+          "key": "name",
+          "templateOptions": {
+            "label": "Button text",
+            "required": true
+          }
+        }]
+      }
+    }
+  ],
+  "showOn" : {
+      "menu" : true,
+      "market" : true,
+      "dragDrop" : true
+  }
+}
