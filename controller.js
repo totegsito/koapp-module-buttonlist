@@ -15,8 +15,9 @@
 
     angular.forEach($scope.buttonlist.modulescope.menuItems, function(value, key) {
       if (structureService.get().modules[value.path]) {
-        if( typeof($rootScope.currentIndex) === 'undefined' && $location.path() === value.path)
+        if( (typeof($rootScope.currentIndex) === 'undefined') || ($location.path() === value.path)){
           $rootScope.currentIndex = key;
+        }
 
         list.push({
           name: value.name,
